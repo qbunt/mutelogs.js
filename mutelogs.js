@@ -23,5 +23,3 @@ var mute = (function () {
         logs:logs
     }
 })();
-
-iter
