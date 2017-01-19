@@ -1,25 +1,28 @@
-var mute = (function () {
-    var iterateLogs = function (config) {
-        for (var prop in console){
-            config.iteratee(prop);
-        }
-    };
-    
-    var noop =  function(){};
-    var logs = function(muted){
-        var muted = typeof muted !== 'undefined' ? muted : false;
-        iterateLogs({
-            iteratee: function(prop){
-                if ( muted === true ){
-                    console[prop] = noop;
-                } else if( muted === false ) {
-                    delete console[prop];
+(function(exports){
+    var noop = function(){}
+    var iterateConsole = function (mute) {
+        if(mute == 'mute'){
+            for (var prop in console){
+                console.log(prop)
+                console[prop] = noop;
+            }
+        } else if (mute == 'unmute'){
+            for (var prop in console){
+                delete console[prop];
+                if(console.log){
+                    console.log(prop)
                 }
             }
-        });
+        }
+    }
+
+    exports.mute = function(){
+        iterateConsole('mute')
+        return 'muted'
+    };
+    exports.unmute = function(){
+        iterateConsole('unmute')
+        return 'unmuted'
     };
 
-    return {
-        logs:logs
-    }
-})();
+})(typeof exports === 'undefined'? this['mutelogs']={}: exports);
