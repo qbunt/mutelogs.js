@@ -9,3 +9,11 @@ A simple/fast/easy no-dependency way to **reversibly** mute all the `console.*` 
 
 #### To unmute all `console.*` methods
 `mutelogs.mute();`
+
+## Install
+`npm install mutelogs`
+
+## License
+[MIT](https://en.wikipedia.org/wiki/MIT_License)
+
+##
