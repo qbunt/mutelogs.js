@@ -8,7 +8,7 @@ A simple/fast/easy no-dependency way to **reversibly** mute all the `console.*` 
 `mutelogs.mute();`
 
 #### To unmute all `console.*` methods
-`mutelogs.mute();`
+`mutelogs.unmute();`
 
 ## Install
 `npm install mutelogs`
