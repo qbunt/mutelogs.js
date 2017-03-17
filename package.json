@@ -1,6 +1,6 @@
 {
   "name": "mutelogs.js",
-  "version": "1.6.0",
+  "version": "1.6.1",
   "description": "A quick easy way to mute all console.* messages",
   "main": "mutelogs.js",
   "scripts": {
