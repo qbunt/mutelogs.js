@@ -1,6 +1,6 @@
 {
   "name": "mutelogs.js",
-  "version": "1.5.0",
+  "version": "1.6.0",
   "description": "A quick easy way to mute all console.* messages",
   "main": "mutelogs.js",
   "scripts": {
@@ -20,8 +20,13 @@
     "url": "https://github.com/qbunt/mutelogs.js/issues"
   },
   "homepage": "https://github.com/qbunt/mutelogs.js#readme",
-  "dependencies": {
-    "lint": "^1.1.2"
-  },
-  "devDependencies": {}
+  "devDependencies": {
+    "jasmine-core": "^2.5.2",
+    "jasmine-node": "^1.14.5",
+    "karma": "^1.5.0",
+    "karma-chrome-launcher": "^2.0.0",
+    "karma-coverage": "^1.1.1",
+    "karma-jasmine": "^1.1.0",
+    "karma-phantomjs-launcher": "^1.0.4"
+  }
 }

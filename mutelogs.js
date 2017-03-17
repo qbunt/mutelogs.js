@@ -1,17 +1,16 @@
 (function(exports){
     var noop = function(){}
+    // hold all console.* methods for retrieval
+    var temp = {}
     var iterateConsole = function (mute) {
         if(mute == 'mute'){
             for (var prop in console){
-                console.log(prop)
+                temp[prop] =  console[prop];
                 console[prop] = noop;
             }
         } else if (mute == 'unmute'){
-            for (var prop in console){
-                delete console[prop];
-                if(console.log){
-                    console.log(prop)
-                }
+            for (var prop in temp){
+                console[prop] = temp[prop]
             }
         }
     }
@@ -20,6 +19,7 @@
         iterateConsole('mute')
         return 'muted'
     };
+    
     exports.unmute = function(){
         iterateConsole('unmute')
         return 'unmuted'
