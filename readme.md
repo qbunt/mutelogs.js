@@ -19,6 +19,9 @@ Works with Node and the browser.
     mutelogs.mute()
     // or 
     mutelogs.unmute()
+    
+## Testing
+    npm run test
 
 ## License
 [MIT](https://en.wikipedia.org/wiki/MIT_License)
