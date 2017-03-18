@@ -24,4 +24,4 @@ Works with Node and the browser.
     npm run test
 
 ## License
-[MIT](https://en.wikipedia.org/wiki/MIT_License)
+[MIT](./LICENSE)
